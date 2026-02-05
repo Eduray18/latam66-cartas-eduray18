@@ -1,5 +1,42 @@
-@import "bootstrap/dist/css/bootstrap.min.css";
+body {
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
 
-body{
-    background: white;
+.card {
+    background-color: white;
+    width: 300px; /* Tamaño fijo para que no se estire */
+    height: 450px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.3);
+    position: relative;
+}
+
+/* Colores */
+.card.heart, .card.diamond { color: red; }
+.card.spade, .card.club { color: black; }
+
+.suit {
+    font-size: 70px;
+    line-height: 1;
+}
+
+#cardContent {
+    font-size: 150px; /* El número central */
+    text-align: center;
+    font-weight: bold;
+    margin: 0;
+}
+
+.inverted {
+    transform: rotate(180deg);
+    align-self: flex-end;
 }
